@@ -23,26 +23,22 @@ int main()
     }
 
     // Create a tuple that stores the resolution of an image
-    tuple resolution = {720, 480};
+    tuple resolution = {1000, 1000};
 
     // P3 means colors are in ASCII, then number of columns and rows, and max color value e.g. image precision
     file << "P3\n" << resolution.x << " " << resolution.y << "\n255\n";
 
-    vector3 lower_left_corner(-2.0, -1.0, -1.0);
-    vector3 horizontal(4.0, 0.0, 0.0);
-    vector3 vertical(0.0, 2.0, 0.0);
-    vector3 origin(0.0, 0.0, 0.0);
-
+    // Color data-type for printing a color
     color col;
 
-    for (int j = resolution.y - 1; j >= 0; j--)
+    for (int j = 0; j < resolution.y; j++)
     {
         for (int i = 0; i < resolution.x; i++)
         {
-            float u = float(i) / float(resolution.x);
-            float v = float(j) / float(resolution.y);
+            float u = float(i) / float(resolution.x) * 2 - 1;
+            float v = float(j) / float(resolution.y) * 2 - 1;
 
-            ray r(origin, lower_left_corner + u * horizontal + v * vertical);
+            ray r(vector3(0,0,0), origin - vector3(u, v, -1.0));
             vector3 point = r.intersectionPoint();
 
             bool hitSphere = r.sphereIntersection(vector3(0.0, 0.0, -3.0), 1.0);
