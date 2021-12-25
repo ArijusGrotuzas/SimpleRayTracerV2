@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1640107188 source:c:\users\tamst\documents\simpleraytracerv2\main.cpp
+1640462983 source:c:\users\tamst\documents\simpleraytracerv2\main.cpp
 	<iostream>
 	<bits/stdc++.h>
 	<ray.h>
@@ -13,7 +13,7 @@
 	<stdlib.h>
 	<iostream>
 
-1640107484 c:\users\tamst\documents\simpleraytracerv2\include\ray.h
+1640456384 c:\users\tamst\documents\simpleraytracerv2\include\ray.h
 	<vector3.h>
 	<color.h>
 

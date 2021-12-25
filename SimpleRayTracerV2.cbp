@@ -35,7 +35,9 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/color.h" />
+		<Unit filename="include/object.h" />
 		<Unit filename="include/ray.h" />
+		<Unit filename="include/sphere.h" />
 		<Unit filename="include/vector3.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
